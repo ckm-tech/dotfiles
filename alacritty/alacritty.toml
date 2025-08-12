@@ -1,0 +1,133 @@
+# Alacritty Configuration File
+# For full documentation: https://alacritty.org/config-alacritty.html
+
+# Window settings
+[window]
+dimensions = { columns = 120, lines = 30 }
+position = { x = 0, y = 0 }
+padding = { x = 0, y = 0 }
+dynamic_padding = true
+decorations = "Full"
+opacity = 1
+startup_mode = "Maximized"
+title = "Alacritty"
+dynamic_title = true
+class = { instance = "Alacritty", general = "Alacritty" }
+resize_increments = true
+option_as_alt = "Both"
+
+# Scrolling
+[scrolling]
+history = 10000
+multiplier = 3
+
+# Font
+[font]
+normal = { family = "0xProto Nerd Font", style = "Regular" }
+bold = { family = "0xProto Nerd Font", style = "Bold" }
+italic = { family = "0xProto Nerd Font", style = "Italic" }
+bold_italic = { family = "0xProto Nerd Font", style = "Bold Italic" }
+size = 11.0
+offset = { x = 0, y = 0 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true
+
+# Colors - Tokyo Night
+[colors.primary]
+background = "#1a1b26"
+foreground = "#a9b1d6"
+
+[colors.cursor]
+text = "#1a1b26"
+cursor = "#c0caf5"
+
+[colors.vi_mode_cursor]
+text = "#1a1b26"
+cursor = "#bb9af7"
+
+[colors.selection]
+text = "CellForeground"
+background = "#33467C"
+
+[colors.search.matches]
+foreground = "#24283b"
+background = "#ff9e64"
+
+[colors.search.focused_match]
+foreground = "#24283b"
+background = "#73daca"
+
+[colors.footer_bar]
+background = "#1a1b26"
+foreground = "#a9b1d6"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.normal]
+black = "#15161e"
+red = "#f7768e"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#a9b1d6"
+
+[colors.bright]
+black = "#414868"
+red = "#f7768e"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#c0caf5"
+
+[colors.dim]
+black = "#15161e"
+red = "#b2555b"
+green = "#8da560"
+yellow = "#bfa36a"
+blue = "#668bd7"
+magenta = "#9876aa"
+cyan = "#5eacd3"
+white = "#828bb8"
+# Selection
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+# Cursor
+[cursor]
+style = { shape = "Block", blinking = "On" }
+vi_mode_style = { shape = "Underline", blinking = "Always" }
+blink_interval = 500
+blink_timeout = 0
+unfocused_hollow = true
+thickness = 0.15
+
+# Mouse
+[mouse]
+hide_when_typing = true
+bindings = [
+  { mouse = "Right", action = "Paste" },
+]
+
+# Hints
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+enabled = [
+  { regex = "(https?://[^\u0000-\u001F\u007F-\u009F<>\"\\s]+)", action = "Copy", post_processing = true, persist = false, binding = { key = "U", mods = "Control|Shift" } }
+]
+
+# Shell (set to bash)
+[terminal.shell]
+program = "/bin/bash"
+
+# Debugging
+[debug]
+render_timer = false
+persistent_logging = false
+log_level = "Warn"
+print_events = false
